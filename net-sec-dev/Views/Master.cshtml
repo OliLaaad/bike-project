@@ -1,7 +1,16 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = null;
+
+var image = "";
+
+if(CurrentPage.imagemain != null)
+{
+image = Umbraco.Content(CurrentPage.imageMain).Url;
 }
+}
+
+
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -22,7 +31,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="~/scripts/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
+<body style="background:url('@image')">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
