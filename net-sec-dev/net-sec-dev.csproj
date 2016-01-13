@@ -297,6 +297,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="media\1001\backgroundhome.jpg" />
+    <Content Include="media\1001\backgroundhome_big-thumb.jpg" />
+    <Content Include="media\1001\backgroundhome_thumb.jpg" />
     <Content Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -3059,7 +3062,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\packages\created\" />
-    <Folder Include="media\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
