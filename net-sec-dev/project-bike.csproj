@@ -382,6 +382,7 @@
     <Content Include="umbraco\assets\less\shadow.less" />
     <Content Include="umbraco\assets\less\slider.less" />
     <Content Include="umbraco\Install\Views\Index.cshtml" />
+    <Content Include="xonnectionStrings.config" />
     <None Include="umbraco\Install\Views\Web.config" />
     <Content Include="umbraco\lib\angular-dynamic-locale\tmhDynamicLocale.min.js.map" />
     <Content Include="umbraco\lib\bootstrap-tabdrop\README.md" />
@@ -677,7 +678,6 @@
     <Content Include="Config\Lang\ru-RU.user.xml" />
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
-    <Content Include="connectionStrings.config" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\main.css" />
