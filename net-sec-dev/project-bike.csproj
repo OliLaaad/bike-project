@@ -362,7 +362,7 @@
     <Content Include="umbraco\assets\less\shadow.less" />
     <Content Include="umbraco\assets\less\slider.less" />
     <Content Include="umbraco\Install\Views\Index.cshtml" />
-    <Content Include="conns.config" />
+    <Content Include="pass.config" />
     <None Include="Properties\PublishProfiles\cyberspacebar.com - Web Deploy.pubxml" />
     <None Include="umbraco\Install\Views\Web.config" />
     <Content Include="umbraco\lib\angular-dynamic-locale\tmhDynamicLocale.min.js.map" />
