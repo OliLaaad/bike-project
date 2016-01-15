@@ -304,6 +304,7 @@
     <Content Include="media\1002\bike_big-thumb.jpg" />
     <Content Include="media\1002\bike_thumb.jpg" />
     <Content Include="packages.config" />
+    <Content Include="scripts\masonry.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -587,10 +588,8 @@
     <Content Include="css\main.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-1.11.2.min.js" />
     <Content Include="scripts\main.js" />
-    <Content Include="scripts\modernizr-2.8.3.min.js" />
     <Content Include="umbraco\Actions\delete.aspx" />
     <Content Include="umbraco\Actions\editContent.aspx" />
     <Content Include="umbraco\Actions\preview.aspx" />
@@ -2956,6 +2955,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Helpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

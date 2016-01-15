@@ -1,5 +1,10 @@
 
 
+    var msnry = new Masonry('.grid', {
+        itemSelector: '.grid-item'
+    });
+
+
 
 // media query event handler
 if (matchMedia) {

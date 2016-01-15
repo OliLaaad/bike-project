@@ -1,4 +1,16 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "Master.cshtml";
+    var cities = CurrentPage.Children;
 }
+<div class="row grid">
+    @foreach (var city in cities)
+    {
+        <a title="@city.cityName" href="@city.Url">
+            <div class="grid-item col-md-3 col-sm-6 col-xs-12">
+                <h2>Business On A Bike</h2>
+                <h3>@city.cityName</h3>
+            </div>
+        </a>
+    }
+</div>

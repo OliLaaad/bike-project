@@ -1,4 +1,42 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = null;
+    Layout = "Master.cshtml";
+    var businesses = CurrentPage.Children;
+    var social = CurrentPage.socialLinks;
 }
+<div class="row">
+    <div class="col-sm-6">
+        <h1>Business <br /> on a bike</h1>
+        <h2>@CurrentPage.cityName</h2>
+    </div>
+       <div class="blurb col-sm-2">
+            <p>@CurrentPage.blurb</p>
+           <br />
+           <p><a class="submit" href="@CurrentPage.email">@CurrentPage.emailText</a></p>
+        </div>
+        <div class="col-sm-offset-1 col-sm-3">
+       @foreach (var link in social)
+       {
+            <p><a title="@link.title" href="@link.url">@link.title</a></p>
+        }
+        </div>
+    </div>
+
+
+    <div class="row grid">
+        @foreach (var business in businesses)
+        {
+            <a href="@if (OliBase.Helpers.HasValue(business.businessWebsite)) {@business.businessWebsite } " title="@if (OliBase.Helpers.HasValue(business.cityName)){@business.cityName} Website">
+                <div class="grid-item col-md-3 col-sm-6 col-xs-12">
+                    <h2>
+                        @if (OliBase.Helpers.HasValue(business.businessName))
+                           {@business.businessName }
+                    </h2>
+                    <p>
+                        @if (OliBase.Helpers.HasValue(business.businessSpecialities))
+                        {@business.businessSpecialities }
+                    </p>
+</div>
+            </a>
+        }
+    </div>
