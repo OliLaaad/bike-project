@@ -62,8 +62,8 @@ a:hover,a:focus{
 
 .grid-item{
     padding:20px;
-    height:200px;
 }
+
 
 .grid-item:hover{
     text-decoration:underline;
@@ -86,3 +86,13 @@ a:hover,a:focus{
     z-index: -1;
     top: 0;
 }
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 768px) {
+
+    .grid-item{
+        height:auto;
+    }
+
+}
+
