@@ -1,9 +1,18 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = null;
+
+    string image = "";
+
+    if (OliBase.Helpers.HasValue(CurrentPage.image))
+    {
+        
+        image = Umbraco.Media(CurrentPage.image).url;
+    }
 }
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" style="background:url(@image) no-repeat;
+    background-size: 90%; background-position:center 60px;">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

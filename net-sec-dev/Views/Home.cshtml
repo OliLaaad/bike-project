@@ -2,14 +2,23 @@
 @{
     Layout = "Master.cshtml";
     var cities = CurrentPage.Children;
+    var image = "";
 }
 <div class="row grid">
     @foreach (var city in cities)
     {
+        if (OliBase.Helpers.HasValue(city.image))
+        {
+
+            image = Umbraco.Media(city.image).url;
+        }
+
         <a title="@city.cityName" href="@city.Url">
-            <div class="grid-item col-md-3 col-sm-6 col-xs-12">
-                <h2>Business On A Bike</h2>
+            <div class="home-item grid-item col-md-3 col-sm-6 col-xs-12" @*style="background: url(@image) 20% 20px / 85% no-repeat; min-height: 120%;"*@>
+                <h2>Business<br /> On A Bike</h2>
                 <h3>@city.cityName</h3>
+                <img src="@image" />
+
             </div>
         </a>
     }

@@ -303,6 +303,11 @@
     <Content Include="media\1002\bike.png" />
     <Content Include="media\1002\bike_big-thumb.jpg" />
     <Content Include="media\1002\bike_thumb.jpg" />
+    <Content Include="media\1003\minus84.svg" />
+    <Content Include="media\1004\boab-edi-v1.svg" />
+    <Content Include="media\1005\boab-gla-v1.svg" />
+    <Content Include="media\1006\boab-nyc-v1.svg" />
+    <Content Include="media\1007\boab-lon-v1.svg" />
     <Content Include="packages.config" />
     <Content Include="scripts\masonry.js" />
     <Content Include="Views\Web.config" />
