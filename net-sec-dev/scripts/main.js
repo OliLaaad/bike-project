@@ -34,6 +34,7 @@ if (matchMedia) {
         {            
             for (i = 0; i < cols.length; i++) {
 
+                cols[i].style.height = "0px";
                 cols[i].style.height = "auto";
             }
         }
