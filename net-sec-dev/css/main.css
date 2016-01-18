@@ -73,6 +73,10 @@ a:hover,a:focus{
     text-decoration:underline;
 }
 
+.submit:hover{
+    text-decoration:none;
+}
+
 .pad{
     padding-left:20px;
 }
@@ -85,6 +89,10 @@ a:hover,a:focus{
         position: inherit;
     z-index: -1;
     top: 0;
+}
+
+.home-item{
+    height:auto;
 }
 
 /* Extra Small Devices, Phones */ 

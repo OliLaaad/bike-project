@@ -11,12 +11,12 @@
         <h2>@CurrentPage.cityName</h2>
         <br />
     </div>
-       <div class="pad col-sm-2">
+       <div class="pad col-sm-3">
             <p>@CurrentPage.blurb</p>
            <br />
            <p><a class="submit" href="mailto:@CurrentPage.email">@CurrentPage.emailText</a></p>
         </div>
-        <div class="social pad col-sm-offset-1 col-sm-3">
+        <div class="social pad col-sm-3">
        @foreach (var link in social)
        {
             <p><a title="@link.title" href="@link.link">@link.title</a></p>
@@ -29,7 +29,7 @@
         @foreach (var business in businesses)
         {
             <a href="@if (OliBase.Helpers.HasValue(business.businessWebsite)) {@business.businessWebsite } " title="@if (OliBase.Helpers.HasValue(business.cityName)){@business.cityName} Website">
-                <div class="grid-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="grid-item business col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <h2>
                         @if (OliBase.Helpers.HasValue(business.businessName))
                            {@business.businessName }
