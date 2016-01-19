@@ -97,11 +97,13 @@ a:hover,a:focus{
 .home-item > img{
         position: inherit;
     z-index: -1;
-    top: 0;
+      top: -10px;
+    width: 100%;
+    height: 95%;
 }
 
 .home-item{
-    height:auto;
+    height:300px;
 }
 
 /* Extra Small Devices, Phones */ 
@@ -137,15 +139,9 @@ a:hover,a:focus{
 }
     .pad{
     padding-left:15px;
+    padding-bottom:15px;
 }
-    
-    .home-item{
-            height: 240px;
-    }
-
-    .home-item > img {
-            height: 220px;
-    }
+   
 
     .grid-item{      
         padding:15px;
@@ -159,19 +155,13 @@ a:hover,a:focus{
 
 @media only screen and (max-width : 566px) {
     html {
-        background-position: left;
+            background-position: 0px 70px;
     }
 }
 
 
 @media only screen and (max-width : 1024px) {
 
-     .home-item{
-            height: 240px;
-    }
-       .home-item > img {
-            height: 220px;
-    }
 
 
 

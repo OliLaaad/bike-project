@@ -19,13 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 if (matchMedia) {
 
-    var mqsm = window.matchMedia("(min-width: 992px)");
+    var mqsm = window.matchMedia("(min-width: 768px)");
     var mq = window.matchMedia("(min-width: 992px)");
     var mqlg = window.matchMedia("(min-width: 1200px)");
     mq.addListener(WidthMidChange);
     mqlg.addListener(WidthMidChange);
     mqsm.addListener(WidthMidChange);
 }
+
 
 
     function WidthMidChange() {
