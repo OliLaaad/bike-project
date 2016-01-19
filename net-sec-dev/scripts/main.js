@@ -1,7 +1,7 @@
 
 
 
-var cols = document.getElementsByClassName('grid-item business');
+var cols = document.getElementsByClassName('business');
 
   
 

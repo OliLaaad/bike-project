@@ -1,4 +1,8 @@
 html{
+     background-position:center 0px;
+      background-size: contain;
+      background-repeat:no-repeat;
+       background-attachment:fixed;
 }
 
 body{
@@ -22,9 +26,14 @@ h1{
 }
 
 h2{
+
     font-size: 36px;
     margin:0 0 10px 0;
     line-height:36px;
+}
+
+.home-item h2{
+    margin:0;
 }
 
 h3{
@@ -98,9 +107,72 @@ a:hover,a:focus{
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 768px) {
 
-    .grid-item{
-        height:auto;
+
+    h1{
+        font-size:40px;
+        line-height: 40px;
     }
+
+    h2{
+    font-size: 24px;
+    line-height:24px;
+    }
+
+    h3{
+    font-size:16px;
+    line-height:16px;
+}
+
+    p {
+        font-size: 10px;
+    }
+
+    .main{
+    margin:40px;
 
 }
 
+    .social > p{
+        margin-top: 10px;
+}
+    .pad{
+    padding-left:15px;
+}
+    
+    .home-item{
+            height: 240px;
+    }
+
+    .home-item > img {
+            height: 220px;
+    }
+
+    .grid-item{      
+        padding:15px;
+    }
+    .business{
+        height:auto;
+    }
+}
+
+/* Extra Small Devices, Phones 566*/
+
+@media only screen and (max-width : 566px) {
+    html {
+        background-position: left;
+    }
+}
+
+
+@media only screen and (max-width : 1024px) {
+
+     .home-item{
+            height: 240px;
+    }
+       .home-item > img {
+            height: 220px;
+    }
+
+
+
+}
