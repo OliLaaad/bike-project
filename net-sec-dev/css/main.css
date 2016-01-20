@@ -1,5 +1,5 @@
 html{
-     background-position:center 0px;
+     background-position:center;
       background-size: contain;
       background-repeat:no-repeat;
        background-attachment:fixed;
@@ -109,6 +109,7 @@ a:hover,a:focus{
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 768px) {
 
+    
 
     h1{
         font-size:40px;
@@ -149,20 +150,18 @@ a:hover,a:focus{
     .business{
         height:auto;
     }
+
+
+
 }
 
 /* Extra Small Devices, Phones 566*/
 
-@media only screen and (max-width : 566px) {
-    html {
-            background-position: 0px 70px;
-    }
-}
-
-
-@media only screen and (max-width : 1024px) {
-
-
-
+@media only screen and (max-height : 627px) {
 
 }
+
+@media only screen and (max-height : 640px) {
+ 
+}
+

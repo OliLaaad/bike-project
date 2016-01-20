@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 if (matchMedia) {
-
     var mqsm = window.matchMedia("(min-width: 768px)");
     var mq = window.matchMedia("(min-width: 992px)");
     var mqlg = window.matchMedia("(min-width: 1200px)");
@@ -27,7 +26,24 @@ if (matchMedia) {
     mqsm.addListener(WidthMidChange);
 }
 
+function SetBackgroundImagePosition() {
+    var htmlMain = document.getElementById("html");
 
+    if (window.outerWidth <= 767) {
+
+        windHeight = window.outerHeight;
+        positionHeight = windHeight * 0.1;
+        positionHeight = "0px " + positionHeight + "px"
+        htmlMain.style.backgroundPosition = positionHeight;
+        console.log(windHeight);
+    }
+    else
+    {
+
+        htmlMain.style.backgroundPosition = "center 0px";
+
+    }
+}
 
     function WidthMidChange() {
 
