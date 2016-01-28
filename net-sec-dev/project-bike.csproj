@@ -308,6 +308,15 @@
     <Content Include="media\1005\boab-gla-v1.svg" />
     <Content Include="media\1006\boab-nyc-v1.svg" />
     <Content Include="media\1007\boab-lon-v1.svg" />
+    <Content Include="media\1008\boab-edi-v1.svg" />
+    <Content Include="media\1009\boab-edi-v1.svg" />
+    <Content Include="media\1010\boab-edi-v1.svg" />
+    <Content Include="media\1011\boab-edi-v1.svg" />
+    <Content Include="media\1012\boab-edi-v1.svg" />
+    <Content Include="media\1013\boab-edi-v1.svg" />
+    <Content Include="media\1014\boab-gla-v1.svg" />
+    <Content Include="media\1015\boab-edi-v1.svg" />
+    <Content Include="media\1016\boab-favicon-64px.gif" />
     <Content Include="packages.config" />
     <Content Include="scripts\masonry.js" />
     <Content Include="Views\Web.config" />

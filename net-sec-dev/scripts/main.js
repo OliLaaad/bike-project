@@ -32,15 +32,15 @@ function SetBackgroundImagePosition() {
     if (window.outerWidth <= 767) {
 
         windHeight = window.outerHeight;
-        positionHeight = windHeight * 0.1;
+        positionHeight = windHeight * 0.2;
         positionHeight = "0px " + positionHeight + "px"
         htmlMain.style.backgroundPosition = positionHeight;
         console.log(windHeight);
     }
     else
     {
-
-        htmlMain.style.backgroundPosition = "center 0px";
+        console.log("should reset");
+        htmlMain.style.backgroundPosition = "center";
 
     }
 }
@@ -48,7 +48,8 @@ function SetBackgroundImagePosition() {
     function WidthMidChange() {
 
         if(window.outerWidth <= 767 )
-        {            
+        {
+            SetBackgroundImagePosition();
             for (i = 0; i < cols.length; i++) {
 
                 cols[i].style.height = "0px";
@@ -56,6 +57,7 @@ function SetBackgroundImagePosition() {
             }
         }
         else if (window.outerWidth <= 991) {
+            SetBackgroundImagePosition();
             setHeight(2, 'grid-item');
         }
         else if (window.outerWidth <= 1199) {
