@@ -1,23 +1,46 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "Master.cshtml";
-    var cities = CurrentPage.Children;
+    var cities = CurrentPage.Children;  
+    var social = CurrentPage.socialLinks;
     var image = "";
 }
-<div class="row grid">
-    @foreach (var city in cities)
-    {
-        if (OliBase.Helpers.HasValue(city.image))
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <a href="/" title="Business on a bike"><h1>Business <br /> on a bike</h1></a>
+        <br />
+    </div>
+    <div class="pad col-sm-3">
+        <p>@CurrentPage.blurb</p>
+        <br />
+        <p><a class="submit" href="mailto:@CurrentPage.email">@CurrentPage.emailText</a></p>
+    </div>
+    <div class="social pad col-sm-3">
+        @foreach (var link in social)
         {
-
-            image = Umbraco.Media(city.image).url;
+            <p><a title="@link.title" href="@link.link">@link.title</a></p>
         }
+    </div>
+</div>
 
-        <a title="@city.cityName" href="@city.Url">
-            <div class="home-item grid-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <h2>Business<br /> On A Bike</h2>
-                <h3>@city.cityName</h3>
-                <img src="@image" />
+<div class="row grid">
+    @foreach (var city in cities.OrderBy("cityName"))
+    {
+        var businesses = city.Children;
+
+
+        <a href="@if (OliBase.Helpers.HasValue(city.Url)) {@city.cityName } " title="@if (OliBase.Helpers.HasValue(city.cityName)){@city.cityName}">
+            <div class="grid-item business col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <h2>
+                    @if (OliBase.Helpers.HasValue(city.cityName))
+                    {@city.cityName }
+                </h2>
+                <p>
+                    @if (OliBase.Helpers.HasValue(city.children))
+                    {@businesses.Count() <text>Businesses                    </text>    }
+                </p>
             </div>
         </a>
     }
