@@ -5,6 +5,14 @@ html{
        background-attachment:fixed;
 }
 
+.backgroundImage{
+    position:fixed;
+    max-height:100%;
+      top: 50%;
+  transform: translateY(-50%);
+}
+
+
 body{
     font-family:Montserrat;
     color:black;

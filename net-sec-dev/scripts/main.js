@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var x = 0;
         var big = 0;
 
+
         WidthMidChange();
         var msnry = new Masonry('.grid', {
             itemSelector: '.grid-item'
         });
-
     });
 
 if (matchMedia) {
@@ -26,45 +26,57 @@ if (matchMedia) {
     mqsm.addListener(WidthMidChange);
 }
 
-function SetBackgroundImagePosition() {
-    var htmlMain = document.getElementById("html");
+//function SetBackgroundImagePosition() {
+//    var htmlMain = document.getElementById("html");
 
-    if (window.outerWidth <= 767) {
+//    if (window.outerWidth <= 767) {
 
-        windHeight = window.outerHeight;
-        positionHeight = windHeight * 0.2;
-        positionHeight = "0px " + positionHeight + "px"
-        htmlMain.style.backgroundPosition = positionHeight;
-        console.log(windHeight);
-    }
-    else
-    {
-        console.log("should reset");
-        htmlMain.style.backgroundPosition = "center";
+//        windHeight = window.outerHeight;
+//        positionHeight = windHeight * 0.2;
+//        positionHeight = "0px " + positionHeight + "px"
+//        htmlMain.style.backgroundPosition = positionHeight;
+//        console.log(windHeight);
+//    }
+//    else
+//    {
+//        console.log("should reset");
+//        htmlMain.style.backgroundPosition = "center";
 
-    }
-}
+//    }
+//}
 
     function WidthMidChange() {
+        
+        var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        if (!iOS) {
+            if (window.outerWidth <= 767) {
+                for (i = 0; i < cols.length; i++) {
 
-        if(window.outerWidth <= 767 )
-        {
-            SetBackgroundImagePosition();
-            for (i = 0; i < cols.length; i++) {
-
-                cols[i].style.height = "0px";
-                cols[i].style.height = "auto";
+                    cols[i].style.height = "0px";
+                    cols[i].style.height = "auto";
+                }
+            }
+            else if (window.outerWidth <= 991) {
+                setHeight(2, 'grid-item');
+            }
+            else if (window.outerWidth <= 1199) {
+                setHeight(3, 'grid-item');
+            }
+            else {
+                setHeight(4, 'grid-item');
             }
         }
-        else if (window.outerWidth <= 991) {
-            SetBackgroundImagePosition();
-            setHeight(2, 'grid-item');
-        }
-        else if (window.outerWidth <= 1199) {
-            setHeight(3, 'grid-item');
-        }
-        else {
-            setHeight(4, 'grid-item');
+        else
+        {
+            if( window.orientation == 0){
+
+                setHeight(2, 'grid-item');
+            }
+            else
+            {
+                setHeight(3, 'grid-item');
+
+            }
         }
     }
 
@@ -105,4 +117,8 @@ function SetBackgroundImagePosition() {
 
     window.onresize = function(event) {
         WidthMidChange();
-        };
+    };
+
+    window.addEventListener("orientationchange", function () {
+        WidthMidChange();
+    }, false);
